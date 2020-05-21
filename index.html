@@ -7,10 +7,37 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,700;1,500&display=swap"
         rel="stylesheet">
-    <script src="./main.js"></script>
+
 </head>
 
 <body>
+    <script>
+        window.onload = () => {
+            const images = document.querySelectorAll('.block-image-container')
+            const mainTitle = document.querySelector('.main-title')
+
+            const onImageClick = (image) => {
+                image.classList.toggle('block-image-preview')
+            }
+            const checkMainTitle = () => {
+                const sY = window.window.scrollY;
+                if (sY > 0) {
+                    mainTitle.classList.add('main-title-sticky')
+                } else {
+                    mainTitle.classList.remove('main-title-sticky')
+                }
+            }
+
+            checkMainTitle()
+
+            images.forEach(image => {
+                image.addEventListener('click', onImageClick.bind(null, image.querySelector('.block-image-container-bg')))
+            })
+            window.onscroll = checkMainTitle
+
+        }
+
+    </script>
     <div class="wrapper">
         <div class="main-title">
             <span>
