@@ -6,6 +6,13 @@ html, body {
     position: relative;
 }
 
+a {
+    color: rgb(0, 11, 109);
+    text-decoration: none;
+    padding-bottom: 2px;
+    border-bottom: 1px solid rgb(0, 11, 109);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -15,6 +22,7 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 150px;
 }
 
 .main-title {
@@ -22,46 +30,101 @@ html, body {
     justify-content: center;
     width: 100%;
     background-color: white;
-    margin-top: 60px;
     padding: 10px 0px 20px;
+    padding-top: 40px;
     /* font-weight: bold; */
-    position: sticky;
+    /* position: sticky;
+    top: 0; */
+    transition: 200ms ease;
+    position: fixed;
     top: 0;
-    transition: 300ms ease;
 }
 
 .main-title span {
-    font-size: 50px;
+    font-size: 70px;
     padding: 10px 20px;
     background-color: black;
     color: white;
     border-radius: 20px;
     font-weight: 500;
     transition: 200ms ease;
+    letter-spacing: 30;
 }
 
 .main-title-sticky {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.116);
     padding-bottom: 10px;
+    top: 0;
+    padding-top: 10px;
 }
 
 .main-title-sticky span {
     font-size: 25px;
     padding: 5px 20px;
     border-radius: 10px;
+    letter-spacing: 5;
+}
+
+.second-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 0;
+    background-color: black;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+}
+
+.second-title span {
+    font-size: 40px;
+    padding: 10px 20px;
+    font-weight: 500;
+    transition: 200ms ease;
+    letter-spacing: 5;
+    color: white;
+}
+
+.block-end {
+    height: 100vh;
+    width: 100%;
+    position: sticky;
+    z-index: 1001;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-size: 90px;
+    font-weight: bold;
+    letter-spacing: 5;
+    background-color: rgb(20, 20, 20);
+    position: relative;
+}
+
+.block-end span {
+    font-size: 20px;
+    position: absolute;
+    bottom: 30px;
+    letter-spacing: normal;
 }
 
 .projects {
-    margin-top: 50px;
+    margin-top: 80px;
     width: 100%;
     display: flex;
     flex-direction: column;
-    max-width: 800px;
+    max-width: 900px;
+}
+
+.projects-2 {
+    margin-top: 150px;
 }
 
 .block {
     width: 100%;
-    max-width: 90%;
     margin-bottom: 80px;
 }
 
@@ -78,6 +141,18 @@ html, body {
     width: 100%;
     font-size: 20px;
     margin-top: 5px;
+    color: rgb(117, 117, 117);
+    max-width: 60%;
+}
+
+.block-subtitle-small {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.block-subtitle-link {
+    margin-top: 10px;
+    font-size: 15px;
 }
 
 .block-technologies {
@@ -105,7 +180,7 @@ html, body {
     display: flex;
     justify-content: center;
     transition: 300ms ease;
-    width: 200px;
+    width: 250px;
     height: 200px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
     margin: 10px;
@@ -125,25 +200,32 @@ html, body {
 }
 
 .block-image-container-bg img {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
+.image-contain {
+    object-fit: contain !important;
+}
+
 .block-image-preview {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     background-color: rgba(0, 0, 0, 0.425);
     margin: 0;
     left: 0;
-    padding: 5% 0;
+    padding: 2% 0;
     overflow: visible;
+    z-index: 1000000;
 }
 
 .block-image-preview img {
     max-width: 90%;
+    width: unset;
     max-height: unset;
+    height: unset;
     object-fit: contain;
 }
