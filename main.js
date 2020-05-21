@@ -2,7 +2,6 @@ window.onload = () => {
     const images = document.querySelectorAll('.block-image-container')
     const mainTitle = document.querySelector('.main-title')
 
-
     const onImageClick = (image) => {
         image.classList.toggle('block-image-preview')
     }
@@ -13,9 +12,7 @@ window.onload = () => {
         } else {
             mainTitle.classList.remove('main-title-sticky')
         }
-
     }
-
 
     checkMainTitle()
 
@@ -23,7 +20,6 @@ window.onload = () => {
         image.addEventListener('click', onImageClick.bind(null, image.querySelector('.block-image-container-bg')))
     })
     window.onscroll = checkMainTitle
-
 }
 
 
