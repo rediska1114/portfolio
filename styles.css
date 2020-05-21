@@ -1,0 +1,149 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    position: relative;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: white;
+    margin-top: 60px;
+    padding: 10px 0px 20px;
+    /* font-weight: bold; */
+    position: sticky;
+    top: 0;
+    transition: 300ms ease;
+}
+
+.main-title span {
+    font-size: 50px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    font-weight: 500;
+    transition: 200ms ease;
+}
+
+.main-title-sticky {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.116);
+    padding-bottom: 10px;
+}
+
+.main-title-sticky span {
+    font-size: 25px;
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.projects {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+}
+
+.block {
+    width: 100%;
+    max-width: 90%;
+    margin-bottom: 80px;
+}
+
+.block-title {
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 0;
+}
+
+.block-subtitle {
+    width: 100%;
+    font-size: 20px;
+    margin-top: 5px;
+}
+
+.block-technologies {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.block-technologies>span {
+    background-color: rgba(201, 201, 201, 0.596);
+    border-radius: 10px;
+    padding: 5px 7px;
+    font-size: 13px;
+    margin: 0 3px;
+}
+
+.block-images {
+    display: flex;
+    margin-top: 30px;
+    margin-left: -10px;
+    flex-wrap: wrap;
+}
+
+.block-image-container {
+    display: flex;
+    justify-content: center;
+    transition: 300ms ease;
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.11);
+    margin: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.block-image-container:hover {
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.block-image-container-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.block-image-container-bg img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+}
+
+.block-image-preview {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.425);
+    margin: 0;
+    left: 0;
+    padding: 5% 0;
+    overflow: visible;
+}
+
+.block-image-preview img {
+    max-width: 90%;
+    max-height: unset;
+    object-fit: contain;
+}
