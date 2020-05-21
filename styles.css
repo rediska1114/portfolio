@@ -117,6 +117,7 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 900px;
+    padding: 0 40px;
 }
 
 .projects-2 {
@@ -228,4 +229,36 @@ a {
     max-height: unset;
     height: unset;
     object-fit: contain;
+}
+
+.no-mobile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 30px;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10000000;
+    color: black;
+}
+
+.no-mobile span {
+    font-size: 250px;
+    font-weight: bold;
+    text-align: center;
+    transform: rotate(90deg)
+}
+
+@media screen and (min-width: 700px) {
+    .no-mobile {
+        display: none;
+    }
+    body, html {
+        overflow: hidden;
+    }
 }
